@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Blood & Plasma Donor Readiness Network</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Pulse</span>
+      <span class="sub">Blood &amp; Plasma Donor Readiness Network</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="current">Home</a>
+      <a href="login.html">Log in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>A directory that knows the moment a donor is ready again.</h1>
+      <p class="lede">Most donor lists go stale the day they're published. Pulse tracks each donor's last
+        donation, calculates the exact date they're eligible again, and only surfaces them to hospitals
+        once they actually are — turning a static spreadsheet into a live readiness pool.</p>
+      <div class="actions">
+        <a href="register.html" class="btn btn-primary">Register as a donor</a>
+        <a href="login.html" class="btn btn-ghost">Post a requirement</a>
+      </div>
+    </div>
+
+    <div class="readout-panel">
+      <div class="js-waveform waveform" data-w="440" data-h="60"></div>
+      <div class="readout-grid">
+        <div class="readout"><div class="num">56 / 14</div><div class="cap">Days until eligible — blood / plasma</div></div>
+        <div class="readout"><div class="num">O&minus;</div><div class="cap">Universal donor, matched first</div></div>
+        <div class="readout"><div class="num">10</div><div class="cap">Point leaderboard, refreshed monthly</div></div>
+        <div class="readout"><div class="num">3</div><div class="cap">Roles: donor, hospital, admin</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="js-waveform pulse-rule accent" data-w="1180" data-h="24"></div></div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built around three people, three jobs</h2>
+      <p>Each role sees exactly what it needs — nothing more. That's what keeps the readiness pool accurate
+        instead of turning into another directory nobody updates.</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="tag">DONOR</div>
+        <h3>Track your own readiness</h3>
+        <p>See your countdown, log a donation, and spend Blood Points on partner offers.</p>
+        <ul>
+          <li>Auto-calculated next-eligible date</li>
+          <li>Blood Points wallet &amp; coupon redemption</li>
+          <li>Regional monthly leaderboard</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="tag">HOSPITAL / RECIPIENT</div>
+        <h3>Search only who's actually ready</h3>
+        <p>Post an urgent requirement and pull a live pool filtered by blood group and readiness.</p>
+        <ul>
+          <li>One-click critical-need flags</li>
+          <li>Live, self-updating donor pool</li>
+          <li>Request status tracking</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="tag">ADMIN</div>
+        <h3>Verify, reward, oversee</h3>
+        <p>Confirm completed donations, award points, and manage local business partnerships.</p>
+        <ul>
+          <li>Donation verification queue</li>
+          <li>Reward &amp; coupon management</li>
+          <li>Full request oversight</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Pulse — academic project prototype</span>
+    <span>HTML · CSS · JS · PHP · MySQL</span>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

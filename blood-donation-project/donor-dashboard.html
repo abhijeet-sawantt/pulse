@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donor Dashboard — Pulse</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="donor">
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Pulse</span>
+      <span class="sub">Blood &amp; Plasma Donor Readiness Network</span>
+    </a>
+    <nav class="nav-links">
+      <span class="role-chip">Donor view</span>
+      <a href="#" id="logoutLink">Log out</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dash">
+  <aside class="dash-side">
+    <div class="who">
+      <div class="name">—</div>
+      <div class="sub">—</div>
+    </div>
+    <nav class="side-nav">
+      <a href="donor-dashboard.html" class="active">Dashboard</a>
+      <a href="#matches">Matching requests</a>
+      <a href="#rewards">Rewards</a>
+      <a href="#leaderboard">Leaderboard</a>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Your readiness</h1>
+        <p>Everything here recalculates the moment you log a donation.</p>
+      </div>
+      <div class="donation-actions">
+        <label class="sr-only" for="donationComponent">Donation type</label>
+        <select id="donationComponent" aria-label="Donation type">
+          <option value="Blood">Whole blood</option>
+        </select>
+        <button id="logDonationBtn" class="btn btn-primary">Log a donation</button>
+      </div>
+    </div>
+
+    <div class="vital-card" id="vitalCard">
+      <div>
+        <div class="status-label">Status</div>
+        <div class="status-value" id="statusValue">—</div>
+        <div class="status-label" id="statusCaption" style="margin-top:8px;">—</div>
+      </div>
+      <div class="js-waveform waveform-small" data-w="160" data-h="40"></div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-tile accent-blood"><div class="num" id="groupStat">—</div><div class="cap">Blood group</div></div>
+      <div class="stat-tile accent-amber"><div class="num" id="pointsStat">—</div><div class="cap">Blood Points</div></div>
+      <div class="stat-tile"><div class="num" id="lastStat">—</div><div class="cap">Last donation</div></div>
+      <div class="stat-tile accent-teal"><div class="num" id="plasmaStat">—</div><div class="cap">Plasma eligible</div></div>
+    </div>
+
+    <div class="panel" id="matches">
+      <div class="panel-head"><h2>Requests matching your group</h2></div>
+      <div class="panel-body">
+        <table class="data">
+          <thead><tr><th>Hospital</th><th>Group / component</th><th>Urgency</th><th>Posted</th></tr></thead>
+          <tbody id="matchList"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="rewards">
+      <div class="panel-head"><h2>Redeem Blood Points</h2></div>
+      <div class="panel-body">
+        <div class="reward-grid" id="rewardGrid"></div>
+      </div>
+    </div>
+
+    <div class="panel" id="leaderboard">
+      <div class="panel-head"><h2>Regional leaderboard — this month</h2></div>
+      <div class="panel-body">
+        <ul class="leader-list" id="leaderList"></ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

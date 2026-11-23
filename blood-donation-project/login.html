@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Pulse</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Pulse</span>
+      <span class="sub">Blood &amp; Plasma Donor Readiness Network</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html" class="current">Log in</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+    </nav>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <div class="auth-side">
+    <div>
+      <div class="js-waveform waveform" data-w="480" data-h="60"></div>
+    </div>
+    <blockquote>
+      "The donor was ready three weeks ago. Nobody knew until we called."
+      <div class="cite">— the problem every static donor list has</div>
+    </blockquote>
+  </div>
+
+  <div class="auth-form-col">
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="hint">Log in to your readiness dashboard.</p>
+
+      <div class="error-msg" role="alert" aria-live="polite"></div>
+      <form id="authForm">
+        <div class="field">
+          <label for="emailField">Email</label>
+          <input id="emailField" type="email" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="passField">Password</label>
+          <input id="passField" type="password" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      </form>
+
+      <p class="form-foot">New here? <a href="register.html">Create an account</a></p>
+      <p class="form-foot" style="margin-top:6px;">Use your registered email and password. Your role comes from your account.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

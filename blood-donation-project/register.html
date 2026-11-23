@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Pulse</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Pulse</span>
+      <span class="sub">Blood &amp; Plasma Donor Readiness Network</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Log in</a>
+      <a href="register.html" class="current btn btn-primary btn-sm">Register</a>
+    </nav>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <div class="auth-side">
+    <div>
+      <div class="js-waveform waveform" data-w="480" data-h="60"></div>
+    </div>
+    <blockquote>
+      "56 days for whole blood, 14 for plasma — Pulse counts them so no one has to."
+      <div class="cite">— the eligibility engine</div>
+    </blockquote>
+  </div>
+
+  <div class="auth-form-col">
+    <div class="auth-card">
+      <h1>Create your account</h1>
+      <p class="hint">Registering as a donor or as a requester works a little differently — pick one.</p>
+
+      <div class="error-msg" role="alert" aria-live="polite"></div>
+
+      <div class="role-toggle">
+        <button type="button" data-role="donor" class="active">Donor</button>
+        <button type="button" data-role="hospital">Requester</button>
+      </div>
+
+      <form id="authForm">
+        <input type="hidden" id="roleInput" value="donor">
+        <div class="field">
+          <label for="nameField" id="nameLabel">Full name</label>
+          <input id="nameField" type="text" required maxlength="100" placeholder="e.g. Ritika Sharma" autocomplete="name">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="emailField">Email</label>
+            <input id="emailField" type="email" required maxlength="150" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phoneField">Phone</label>
+            <input id="phoneField" type="tel" placeholder="98xxxxxxxx" autocomplete="tel">
+          </div>
+        </div>
+
+        <div id="donorOnlyFields">
+          <div class="field-row">
+            <div class="field">
+              <label for="groupField">Blood group</label>
+              <select id="groupField" required>
+                <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lastDonationField">Last donation date</label>
+              <input id="lastDonationField" type="date">
+            </div>
+          </div>
+          <div class="field">
+            <label for="locationField">Location</label>
+            <input id="locationField" type="text" placeholder="Area, city">
+          </div>
+        </div>
+
+        <div id="requesterOnlyFields" style="display:none;">
+          <div class="field">
+            <label for="orgField">Hospital / organization name</label>
+            <input id="orgField" type="text" placeholder="e.g. Fortis Greater Noida">
+          </div>
+          <div class="field">
+            <label for="orgAddressField">Address</label>
+            <input id="orgAddressField" type="text" placeholder="Area, city">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="passField">Password</label>
+          <input id="passField" type="password" required minlength="8" autocomplete="new-password" placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Create account</button>
+      </form>
+
+      <p class="form-foot">Already registered? <a href="login.html">Log in</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

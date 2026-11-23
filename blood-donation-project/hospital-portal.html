@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Portal — Pulse</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="hospital">
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Pulse</span>
+      <span class="sub">Blood &amp; Plasma Donor Readiness Network</span>
+    </a>
+    <nav class="nav-links">
+      <span class="role-chip">Hospital view</span>
+      <a href="#" id="logoutLink">Log out</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dash">
+  <aside class="dash-side">
+    <div class="who">
+      <div class="name">—</div>
+      <div class="sub">—</div>
+    </div>
+    <nav class="side-nav">
+      <a href="hospital-portal.html" class="active">Donor pool</a>
+      <a href="#post">Post requirement</a>
+      <a href="#requests">Your requests</a>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Live donor pool</h1>
+        <p>Only donors who are currently past their eligibility window appear here.</p>
+      </div>
+      <select id="groupFilter">
+        <option value="all">All groups</option>
+        <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+        <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+      </select>
+    </div>
+
+    <div class="panel">
+      <div class="panel-body">
+        <table class="data">
+          <thead><tr><th>Name</th><th>Group</th><th>Eligible for</th><th>Location</th><th>Status</th></tr></thead>
+          <tbody id="donorPool"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="post">
+      <div class="panel-head"><h2>Post an urgent requirement</h2></div>
+      <div class="panel-body">
+        <form id="postRequestForm" class="form-inline">
+          <div class="field">
+            <label>Hospital name</label>
+            <input name="hospital" type="text" placeholder="e.g. Fortis Greater Noida" required>
+          </div>
+          <div class="field">
+            <label>Blood group</label>
+            <select name="bloodGroup">
+              <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Component</label>
+            <select name="component"><option>Blood</option><option>Plasma</option></select>
+          </div>
+          <div class="field">
+            <label>Urgency</label>
+            <select name="urgency"><option>Critical</option><option>Normal</option></select>
+          </div>
+          <button type="submit" class="btn btn-primary">Post request</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel" id="requests">
+      <div class="panel-head"><h2>All requirement requests</h2></div>
+      <div class="panel-body">
+        <table class="data">
+          <thead><tr><th>ID</th><th>Group / component</th><th>Urgency</th><th>Status</th><th>Posted</th></tr></thead>
+          <tbody id="requestList"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

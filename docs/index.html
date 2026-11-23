@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#fffafa">
+    <meta name="description"
+          content="Pulse - A Blood and Plasma Donation Management Network connecting donors, hospitals and administrators.">
+
+    <title>Pulse | Blood & Plasma Donation Network</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffafa;
+            color: #242124;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 22px 8%;
+            border-bottom: 1px solid #eadfda;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ef3348;
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .github-link {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        main {
+            width: min(900px, 90%);
+            margin: auto;
+            padding: 75px 0;
+            text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #d52c44;
+            background: #ffe9ec;
+            border-radius: 30px;
+            padding: 9px 17px;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #ef3348;
+            font-style: italic;
+        }
+
+        .description {
+            color: #68616a;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 680px;
+            margin: 0 auto 32px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 65px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .primary {
+            color: white;
+            background: #ef3348;
+        }
+
+        .primary:hover {
+            background: #ce2139;
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            color: #302a2d;
+            border: 1px solid #e4d8d5;
+            background: white;
+        }
+
+        .secondary:hover {
+            background: #fff0f1;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            text-align: left;
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid #eadfda;
+            border-radius: 10px;
+            padding: 23px;
+        }
+
+        .feature h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        footer {
+            border-top: 1px solid #eadfda;
+            text-align: center;
+            padding: 23px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media(max-width: 650px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 55px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Pulse</div>
+
+    <a class="github-link"
+       href="https://github.com/abhijeet-sawantt/pulse"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Source Code ↗
+    </a>
+</header>
+
+<main>
+
+    <div class="tag">
+        Blood & Plasma Donor Readiness Network
+    </div>
+
+    <h1>
+        Every Drop Counts.<br>
+        <span>Every Life Matters.</span>
+    </h1>
+
+    <p class="description">
+        Pulse is a blood and plasma donation management platform
+        designed to connect donors, hospitals and administrators.
+        Our goal is to simplify donor management, improve coordination
+        and make blood donation more accessible.
+    </p>
+
+    <div class="actions">
+
+        <a class="btn primary"
+           href="https://pulse-blood-donation.freedev.app/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Launch Live Application ↗
+        </a>
+
+        <a class="btn secondary"
+           href="https://github.com/YOUR-GITHUB-USERNAME/pulse-blood-donation"
+           target="_blank"
+           rel="noopener noreferrer">
+            Explore GitHub Repository
+        </a>
+
+    </div>
+
+    <section class="features">
+
+        <div class="feature">
+            <h3>Donor Management</h3>
+            <p>
+                Donor registration, blood group information,
+                eligibility tracking and donation history.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>Hospital Portal</h3>
+            <p>
+                Blood requirement management, request tracking
+                and donor availability.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>Admin Dashboard</h3>
+            <p>
+                Donation verification, donor management,
+                reward management and system monitoring.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Pulse — Blood & Plasma Donor Readiness Network
+    <br><br>
+    Built with HTML, CSS, JavaScript, PHP and MySQL.
+</footer>
+
+</body>
+</html>
